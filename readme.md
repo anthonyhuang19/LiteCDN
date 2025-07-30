@@ -1,4 +1,4 @@
-# 🚀 LiteCDN: A Lightweight Caching Layer for Fast and Efficient Content Delivery
+# LiteCDN: A Lightweight Caching Layer for Fast and Efficient Content Delivery
 
 ![LiteCDN Architecture](figure/figure.png)
 
