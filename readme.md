@@ -1,32 +1,34 @@
-# 🚀 CDN Cache API — A Lightweight Caching Layer for Content Delivery
-![](figure/figure.png)
-Welcome to the **CDN Cache API** project! This repository contains a robust caching system designed to simulate key CDN caching behaviors — including TTL-based expiration, LRU eviction, and an HTTP API interface for cache management. Perfect for learning, testing, or extending to production-grade systems!
+# 🚀 LiteCDN: A Lightweight Caching Layer for Fast and Efficient Content Delivery
+
+![LiteCDN Architecture](figure/figure.png)
+
+**LiteCDN** is a lightweight, extensible caching system that emulates core CDN functionality. It supports time-to-live (TTL)-based expiration, least recently used (LRU) eviction, and a RESTful HTTP API for seamless cache interaction. Designed for both educational purposes and practical application, LiteCDN is ideal for rapid prototyping, system simulation, or integration into microservice architectures.
 
 ---
 
-## 🗂️ Project Overview
+## 📌 Key Features
 
-This project aims to build a **Content Delivery Network (CDN) cache layer** that:
-
-- Efficiently caches HTTP responses with **time-to-live (TTL)** management
-- Supports **Least Recently Used (LRU)** eviction when cache reaches capacity
-- Differentiates cache entries by HTTP method & request path
-- Provides a **FastAPI**-based HTTP interface to interact with the cache
-- Includes a simulated backend server to mimic origin responses for testing
-- Comes with a comprehensive **pytest** suite to ensure stability and correctness
+- **TTL-Based Expiration** — Automatically invalidates cache entries based on configurable timeouts.
+- **LRU Eviction Policy** — Removes the least recently used entries when the cache reaches its capacity.
+- **HTTP-Aware Caching** — Differentiates entries by HTTP method and request path to prevent collisions.
+- **RESTful API Interface** — Built with FastAPI, providing endpoints for managing cache operations and diagnostics.
+- **Simulated Origin Server** — Includes a mock backend to replicate real-world HTTP response behavior.
+- **Test Coverage** — Includes comprehensive `pytest`-based tests to ensure reliability and correctness.
+- **Modular Design** — Clean separation of core caching logic and API layers for easy customization and extension.
 
 ---
 
-## 📁 Project Structure
+## 🗂️ Project Structure
+
 ```bash
 .
-├── app.py # FastAPI application exposing cache API endpoints
-├── cache.py # Cache core logic: TTL, eviction, and key management
-├── main_server.py # Simulated origin backend server for testing purposes
-├── test.py # Automated tests with pytest covering cache and API behaviors
-├── test.sh # Shell script to run tests easily
-├── requirements.txt # Python dependencies required for the project
-└── pycache/ # Python bytecode cache files (auto-generated)
+├── app.py             # FastAPI server exposing cache API endpoints
+├── cache.py           # Core cache logic (TTL, LRU, key management)
+├── main_server.py     # Simulated backend origin server for testing
+├── test.py            # Unit tests for cache functionality and API
+├── test.sh            # Shell script for running tests
+├── requirements.txt   # Project dependencies
+└── figure/            # Diagrams and visuals
 ```
 
 ---
